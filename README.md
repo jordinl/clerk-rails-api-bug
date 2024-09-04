@@ -1,24 +1,33 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Installation
 
-Things you may want to cover:
+Make sure Ruby and Node are installed. Install the dependencies with:
 
-* Ruby version
+```
+bundle
+npm install
+```
 
-* System dependencies
+Copy `.env.sample` to `.env` and fill in the values.
 
-* Configuration
+## Run the app
 
-* Database creation
+```
+foreman start
+```
 
-* Database initialization
+The app will be available at http://localhost:5173.
 
-* How to run the test suite
+## Notes
 
-* Services (job queues, cache servers, search engines, etc.)
+* `clerk_session` raises a deprecation error.
+* Anytime you make a change in the rails app, the rails logs show 
 
-* Deployment instructions
+```
+11:30:45 api.1  | NoMethodError (undefined method `helper_method' for ApplicationController:Class
+11:30:45 api.1  | 
+11:30:45 api.1  |       helper_method :clerk_session, :clerk_reverify_session!,
+11:30:45 api.1  |       ^^^^^^^^^^^^^):
+```
 
-* ...
