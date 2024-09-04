@@ -1,5 +1,5 @@
 class HomeController < ApplicationController
   def show
-    render json: { hello: "world" }
+    render json: { clerk_session:, clerk_user: }
   end
 end
