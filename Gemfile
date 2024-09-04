@@ -40,4 +40,4 @@ group :development, :test do
   gem "rubocop-rails-omakase", require: false
 end
 
-
+gem "foreman", "~> 0.88.1"
